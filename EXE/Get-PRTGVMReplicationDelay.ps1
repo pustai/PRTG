@@ -24,7 +24,7 @@
 
 .EXAMPLE
 .\Get-PRTGVMReplicaDelay.ps1
-    Parameter field: -ComputerName '%host' -Password '%windowspassword' -username '%windowsdomain\%windowsuser' -minuteminuteDelayTime 90
+    Parameter field: -ComputerName '%host' -Password '%windowspassword' -username '%windowsdomain\%windowsuser' -minuteDelayTime 90
     It is posible to use PRTG placeholders to use the informations already defined in PRTG device.
     Expected output
     2: |VM01: 97 min||VM02: 156 min|
