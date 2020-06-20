@@ -56,8 +56,7 @@ Catch {
 
 	"Cannot connect to: $ComputerName"
 	$_.Exception.Message
-    $_.Exception.ItemName
-	exit 2
+    	exit 2
 	
 } # end: Catch {
 
@@ -68,7 +67,7 @@ $Normal = $VMReplication | Where-Object { $_.Health -eq "Normal" } | Measure-Obj
 $Critical = $VMReplication | Where-Object { $_.Health -eq "Critical" } | Measure-Object  | Select-Object -ExpandProperty Count
 $Warning = $VMReplication | Where-Object { $_.Health -eq "Warning" } | Measure-Object | Select-Object -ExpandProperty Count
 
-# Get the name of VMs in Critical, Warning and normal status
+# Get the name of VMs in Critical and Warning status
 if ($Critical -gt 0) {
 	$VMReplication | Where-Object { $_.Health -eq "Critical" } | ForEach-Object {
 		[string[]]$criticalMessage += "$($_.VMName) |"
