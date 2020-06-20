@@ -1,3 +1,3 @@
 # PRTG
 
-Repository to keep PRTG Powershell Scripts
+PRTG Powershell Scripts Repository
